@@ -15,6 +15,7 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
     for(y = 0; y <= height; y += gridSize){
         ctx.beginPath()
         ctx.moveTo(offsetX, offsetY + y);
-
+        ctx.lineTo(offsetX + width, offsetY + y);
+        ctx.stroke()
     }
 }
