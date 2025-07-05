@@ -5,8 +5,14 @@ const useFood = (mapWidth, mapHeight, initialCount = 200, respawnCount = 10, res
     const foodRef = useRef(createFood(initialCount, mapWidth, mapHeight));
 
     useEffect(() => {
+        const interval = setInterval(() => {
+            const newFood = createFood(respawnCount, mapWidth, mapHeight);
+            foodRef.current = foodRef.current.concat(newFood);
+        }, respawnInterval);
+
+        return () => clearInterval(interval);
 
     }, [mapWidth, mapHeight, respawnCount, respawnInterval])
 
-    
+    return foodRef
 }
