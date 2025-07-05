@@ -22,5 +22,13 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
 
 export const createFood = (count, mapWidth, mapHeight, mass = 10) => {
     const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+
+    return Array.from({ length: count }).map(() => ({
+        id: Math.random().toString(36).substr(2, 9),
+        x: Math.random() * mapWidth,
+        y: Math.random() * mapHeight,
+        mass,
+        color: colors[Math.floor(Math.random() * colors.length)],
+    }));
 }
 
