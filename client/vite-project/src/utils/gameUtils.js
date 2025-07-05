@@ -5,11 +5,16 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
     ctx.lineWidth = 1
 
     for (x = 0; x <= width; x += gridSize){
-        ctx.beginPatch()
+        ctx.beginPath()
         ctx.moveTo(offsetX + x, offsetY)
 
         ctx.lineTo(offsetX + x, offsetY + height)
         ctx.stroke()
+    }
+
+    for(y = 0; y <= height; y += gridSize){
+        ctx.beginPath()
+        ctx.moveTo(offsetX, offsetY + y);
 
     }
 }
