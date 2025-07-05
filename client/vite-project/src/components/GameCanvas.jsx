@@ -34,6 +34,7 @@ const GameCanvas = () => {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance > 5) {
+                const angle = Math.atan2(dy, dx);
                 
             }
 
