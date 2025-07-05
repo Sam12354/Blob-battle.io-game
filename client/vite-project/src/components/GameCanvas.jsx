@@ -35,12 +35,17 @@ const GameCanvas = () => {
 
             if (distance > 5) {
                 const angle = Math.atan2(dy, dx);
-                
+
                 const speed = Math.min(maxSpeed, distance * 0.01);
                 playerRef.current.x += Math.cos(angle) * speed;
                 playerRef.current.y += Math.sin(angle) * speed;
             }
 
+            playerRef.current.x = clamp(playerRef.current.x, playerRef.current.mass, mapWidth - playerRef.current.mass);
+            playerRef.current.y = clamp(playerRef.current.y, playerRef.current.mass, mapHeight - playerRef.current.mass);
+
+            const offsetX = clamp(canvas.width / 2 - playerRef.current.x, canvas.width - mapWidth, 0);
+            const offsetY = clamp(canvas.height / 2 - playerRef.current.y, canvas.height - mapHeight, 0);
 
 
             animationFrameId = requestAnimationFrame(update);
