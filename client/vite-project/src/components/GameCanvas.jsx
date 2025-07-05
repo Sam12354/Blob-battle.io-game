@@ -23,6 +23,14 @@ const GameCanvas = () => {
 
         let animationFrameId;
 
+        const update = () => {
+
+            
+
+            animationFrameId = requestAnimationFrame(update);
+        }
+
+
     }, [mapWidth, mapHeight, maxSpeed, foodRef]);
 
 };
