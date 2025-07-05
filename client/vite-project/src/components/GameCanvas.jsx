@@ -36,6 +36,9 @@ const GameCanvas = () => {
             if (distance > 5) {
                 const angle = Math.atan2(dy, dx);
                 
+                const speed = Math.min(maxSpeed, distance * 0.01);
+                playerRef.current.x += Math.cos(angle) * speed;
+                playerRef.current.y += Math.sin(angle) * speed;
             }
 
 
