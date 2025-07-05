@@ -11,6 +11,15 @@ const GameCanvas = () => {
 
     const foodRef = useFood(mapWidth, mapHeight);
 
+    useEffect(() => {
+        
+        const canvas = canvasRef.current;   
+        if (!canvas) return;
+
+        
+
+    }, [mapWidth, mapHeight, maxSpeed, foodRef]);
+
 };
 
 export default GameCanvas;
