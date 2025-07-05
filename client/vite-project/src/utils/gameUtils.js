@@ -7,5 +7,9 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
     for (x = 0; x <= width; x += gridSize){
         ctx.beginPatch()
         ctx.moveTo(offsetX + x, offsetY)
+
+        ctx.lineTo(offsetX + x, offsetY + height)
+        ctx.stroke()
+
     }
 }
