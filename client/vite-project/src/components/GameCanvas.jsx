@@ -25,6 +25,12 @@ const GameCanvas = () => {
 
         const update = () => {
 
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            const dx = mouseRef.current.x - centerX;
+            const dy = mouseRef.current.y - centerY;
+
             
 
             animationFrameId = requestAnimationFrame(update);
