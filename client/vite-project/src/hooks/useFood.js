@@ -16,3 +16,5 @@ const useFood = (mapWidth, mapHeight, initialCount = 200, respawnCount = 10, res
 
     return foodRef
 }
+
+export default useFood;
