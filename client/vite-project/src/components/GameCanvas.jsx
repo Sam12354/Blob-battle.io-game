@@ -31,7 +31,9 @@ const GameCanvas = () => {
             const dx = mouseRef.current.x - centerX;
             const dy = mouseRef.current.y - centerY;
 
-            
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+
 
             animationFrameId = requestAnimationFrame(update);
         }
