@@ -17,10 +17,11 @@ const GameCanvas = () => {
         if (!canvas) return;
 
         const ctx = canvas.getContext('2d');
-        
+
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
+        let animationFrameId;
 
     }, [mapWidth, mapHeight, maxSpeed, foodRef]);
 
