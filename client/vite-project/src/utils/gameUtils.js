@@ -4,7 +4,7 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
     ctx.strokeStyle = "#ccc"
     ctx.lineWidth = 1
 
-    for (x = 0; x <= width; x += gridSize){
+    for (let x = 0; x <= width; x += gridSize){
         ctx.beginPath()
         ctx.moveTo(offsetX + x, offsetY)
 
@@ -12,10 +12,15 @@ export const drawGrid = (ctx, offsetX, offsetY, width, height, gridSize = 50) =>
         ctx.stroke()
     }
 
-    for(y = 0; y <= height; y += gridSize){
+    for(let y = 0; y <= height; y += gridSize){
         ctx.beginPath()
         ctx.moveTo(offsetX, offsetY + y);
         ctx.lineTo(offsetX + width, offsetY + y);
         ctx.stroke()
     }
+};
+
+export const createFood = (count, mapWidth, mapHeight, mass = 10) => {
+    const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
 }
+
