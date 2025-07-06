@@ -108,6 +108,23 @@ const GameCanvas = () => {
 
     }, [mapWidth, mapHeight, maxSpeed, foodRef]);
 
+    return (
+        <canvas
+            ref={canvasRef}
+            style={{
+                display: 'block',
+                backgroundColor: '#fafafa',
+                cursor: 'none',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                zIndex: 1,
+            }}
+        />
+    );
+    
 };
 
 export default GameCanvas;
