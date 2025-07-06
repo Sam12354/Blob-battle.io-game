@@ -82,6 +82,12 @@ const GameCanvas = () => {
 
             ctx.beginPath();
             ctx.arc(offsetX + playerRef.current.x, offsetY + playerRef.current.y, playerRef.current.mass, 0, Math.PI * 2);
+            ctx.fillStyle = 'dodgerblue';
+            ctx.strokeStyle = '#003366';
+            ctx.lineWidth = 3;
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
 
             animationFrameId = requestAnimationFrame(update);
         }
