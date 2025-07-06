@@ -67,7 +67,11 @@ const GameCanvas = () => {
                     playerRef.current.mass += 0.5;
                     return false;
                 }
-                
+
+                ctx.beginPath();
+                ctx.arc(offsetX + food.x, offsetY + food.y, food.mass, 0, Math.PI * 2);
+                ctx.fillStyle = food.color;
+
             });
 
 
