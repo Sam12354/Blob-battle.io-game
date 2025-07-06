@@ -80,6 +80,8 @@ const GameCanvas = () => {
 
             });
 
+            ctx.beginPath();
+            ctx.arc(offsetX + playerRef.current.x, offsetY + playerRef.current.y, playerRef.current.mass, 0, Math.PI * 2);
 
             animationFrameId = requestAnimationFrame(update);
         }
