@@ -92,6 +92,14 @@ const GameCanvas = () => {
             animationFrameId = requestAnimationFrame(update);
         }
 
+        update();
+
+        const handleMouseMove = (e) => {
+            mouseRef.current = { x: e.clientX, y: e.clientY };
+        };
+
+        
+
 
     }, [mapWidth, mapHeight, maxSpeed, foodRef]);
 
