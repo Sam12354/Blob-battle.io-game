@@ -1,4 +1,6 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { clamp, drawGrid } from '../utils/gameUtils';
+import useFood from '../hooks/useFood';
 
 const GameCanvas = () => {
     const canvasRef = useRef(null);
@@ -53,6 +55,8 @@ const GameCanvas = () => {
 
             ctx.strokeStyle = '#aaa';
             ctx.lineWidth = 5;
+            ctx.strokeRect(offsetX, offsetY, mapWidth, mapHeight);
+            drawGrid(ctx, offsetX, offsetY, mapWidth, mapHeight);
 
 
             animationFrameId = requestAnimationFrame(update);
