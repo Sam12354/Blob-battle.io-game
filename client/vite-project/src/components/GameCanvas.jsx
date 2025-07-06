@@ -47,6 +47,9 @@ const GameCanvas = () => {
             const offsetX = clamp(canvas.width / 2 - playerRef.current.x, canvas.width - mapWidth, 0);
             const offsetY = clamp(canvas.height / 2 - playerRef.current.y, canvas.height - mapHeight, 0);
 
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#fafafa';
+            ctx.fillRect(offsetX, offsetY, mapWidth, mapHeight);
 
             animationFrameId = requestAnimationFrame(update);
         }
