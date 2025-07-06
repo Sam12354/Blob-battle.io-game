@@ -51,6 +51,8 @@ const GameCanvas = () => {
             ctx.fillStyle = '#fafafa';
             ctx.fillRect(offsetX, offsetY, mapWidth, mapHeight);
 
+            ctx.strokeStyle = '#aaa';
+
             animationFrameId = requestAnimationFrame(update);
         }
 
