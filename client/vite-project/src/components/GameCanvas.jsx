@@ -98,7 +98,12 @@ const GameCanvas = () => {
             mouseRef.current = { x: e.clientX, y: e.clientY };
         };
 
-        
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            cancelAnimationFrame(animationFrameId);
+        };
 
 
     }, [mapWidth, mapHeight, maxSpeed, foodRef]);
