@@ -75,6 +75,8 @@ const GameCanvas = () => {
                 ctx.strokeStyle = '#660000';
                 ctx.lineWidth = 1;
                 ctx.stroke();
+                ctx.closePath();
+                return true;
 
             });
 
