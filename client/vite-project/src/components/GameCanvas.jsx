@@ -52,6 +52,8 @@ const GameCanvas = () => {
             ctx.fillRect(offsetX, offsetY, mapWidth, mapHeight);
 
             ctx.strokeStyle = '#aaa';
+            ctx.lineWidth = 5;
+
 
             animationFrameId = requestAnimationFrame(update);
         }
