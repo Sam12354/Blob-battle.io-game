@@ -71,6 +71,10 @@ const GameCanvas = () => {
                 ctx.beginPath();
                 ctx.arc(offsetX + food.x, offsetY + food.y, food.mass, 0, Math.PI * 2);
                 ctx.fillStyle = food.color;
+                ctx.fill();
+                ctx.strokeStyle = '#660000';
+                ctx.lineWidth = 1;
+                ctx.stroke();
 
             });
 
