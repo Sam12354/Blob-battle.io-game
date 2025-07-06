@@ -58,6 +58,18 @@ const GameCanvas = () => {
             ctx.strokeRect(offsetX, offsetY, mapWidth, mapHeight);
             drawGrid(ctx, offsetX, offsetY, mapWidth, mapHeight);
 
+            foodRef.current = foodRef.current.filter(food => {
+                const distX = playerRef.current.x - food.x;
+                const distY = playerRef.current.y - food.y;
+                const dist = Math.sqrt(distX * distX + distY * distY);
+
+                if (dist < playerRef.current.mass + food.mass) {
+                    playerRef.current.mass += 0.5;
+                    return false;
+                }
+                
+            });
+
 
             animationFrameId = requestAnimationFrame(update);
         }
