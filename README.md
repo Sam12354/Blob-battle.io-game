@@ -9,4 +9,6 @@ A lightweight browser game inspired by **Agar.io**, where players control a ball
 - Built with **React**
 
 ## 🏁 Getting Started
-Navigate to client with cd .. client then cd .. vite-project and then type npm run dev
+cd client/vite-project
+npm install
+npm run dev
